@@ -58,7 +58,6 @@ body {
 }
 
 .triangle {
-    /* display: none; */
     width: 16em;
     height: 16em;
     border: 1em solid #000000A3;
@@ -251,8 +250,6 @@ button {
             0 0 0 50px rgba(102, 178, 72, 0);
     }
 }
-
-
 .hurray {
     height: 80vh;
     width: 60vw;
@@ -266,20 +263,15 @@ button {
     font-weight: 600;
     letter-spacing: 0.5rem;
 }
-
-
-
 .reward {
     position: relative;
     
 }
-
 .cup {
     position: relative;
     z-index: 1;
-    width: 150px; /* Adjust as needed */
+    width: 150px;
 }
-
 .stars img {
     position: absolute;
     top: 0;
@@ -317,7 +309,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(-150px, 59px); /* Final position */
+        transform: translate(-150px, 59px); 
     }
 }
 @keyframes explode-2 {
@@ -327,7 +319,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(-250px, -60px); /* Final position */
+        transform: translate(-250px, -60px); 
     }
 }
 @keyframes explode-3 {
@@ -337,7 +329,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(-220px, -130px); /* Final position */
+        transform: translate(-220px, -130px); 
     }
 }
 @keyframes explode-4 {
@@ -347,7 +339,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(-120px, -180px); /* Final position */
+        transform: translate(-120px, -180px); 
     }
 }
 @keyframes explode-5 {
@@ -357,7 +349,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(-50px, -130px); /* Final position */
+        transform: translate(-50px, -130px); 
     }
 }
 @keyframes explode-6 {
@@ -367,7 +359,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(40px, -160px); /* Final position */
+        transform: translate(40px, -160px); 
     }
 }
 @keyframes explode-7 {
@@ -377,7 +369,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(150px, -50px); /* Final position */
+        transform: translate(150px, -50px); 
     }
 }
 @keyframes explode-8 {
@@ -387,36 +379,7 @@ button {
     }
     100% {
         opacity: 1;
-        transform: translate(140px, -30px); /* Final position */
-    }
-}
-@keyframes explode-top {
-    0% {
-        opacity: 0;
-        transform: scale(0) translate(0, 0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2) translate(0, -60px); /* Adjust top direction */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translate(0, -100px); /* Final position */
-    }
-}
-
-@keyframes explode-right {
-    0% {
-        opacity: 0;
-        transform: scale(0) translate(0, 0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2) translate(60px, 0); /* Adjust right direction */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translate(100px, 0); /* Final position */
+        transform: translate(140px, -30px); 
     }
 }
 
@@ -427,4 +390,210 @@ button {
 p {
     margin-top: 4px;
     font-size: 1.6rem;
+}
+@media (max-width: 768px) {
+    .game-view {
+        padding-left: 10px;
+    }
+    .score-board {
+        width: 90vw;
+        margin: 0 10vh;
+    }
+    .score-board h2 {
+        line-height: 2.2rem;
+        font-size: 1.3rem;
+    }
+    .scores {
+        width: fit-content;
+        position: absolute;
+        right: 0;
+        transform: translate(-10%, 25%);
+    }
+    .score {
+        font-size: 0.8rem;
+        padding: 10px 6px;
+    }
+    
+    .computer-score, .your-score {
+        font-size: 1.5rem;
+    }
+    
+    .triangle {
+        width: 12em;
+        height: 12em;
+    }
+    
+    .triangle::before {
+        width: calc((1.41 * (12em + 1em)));
+        left: -3.11em;
+        top: 5.22em;
+    }
+    .corner-left {
+        left: 16em;
+        transform: translate(-100%, -40%) rotate(135deg);
+    }
+    .corner-bottom {
+        transform: translate(-60%, -60%) rotate(135deg);
+    }
+    .corner-right {
+        transform: translate(-40%, -102%) rotate(135deg);
+    }
+    .rock, .paper, .scissors {
+        padding: 16px; 
+    }
+    .rock {
+        width: 52px;
+        height: 42px;
+        border: 10px solid #0074B6;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .scissors {
+        width: 36px;
+        height: 42px;
+        padding-left: 22px;
+        padding-right: 22px;
+        border: 10px solid #BD00FF;
+    }
+    .paper {
+        width: 52px;
+        height: 52px;
+        border: 10px solid #FFA943;
+        padding: 16px
+    }
+    .rules {
+        width: 50vw;
+        height: fit-content;
+        padding: 15px 40px;
+        transform: translate(-15%, -25%);
+        letter-spacing: 0.1rem;
+        font-size: 0.1rem;
+    }
+    .rules h1 {
+        font-size: 1.3rem;
+    }
+    .rules span {
+        font-size: 1.3rem;
+    }
+    .end-buttons {
+        width: 97%;
+        bottom: 2%;
+        right: 3%;
+        transform: translate(0%, 10%);
+    }
+    #rules-button, #next-button {
+        padding: 4px 14px;
+        font-size: 1.1rem;
+    }
+    .result-view {
+        width: fit-content;
+        height: 18em;
+        padding: 0 10px;
+    }
+    .result-text h1 {
+        font-size: 1.4rem;
+    }
+    .result-text h3 {
+        font-size: 1rem;
+    }
+    .play-button {
+        padding: 7.5px 20px;
+        font-size: 0.7rem;
+    }
+    
+    .glow {
+        width: 150px;
+        height: 150px;
+    }
+    .cup {
+        width: 100px; 
+    }
+    /* Keyframes for star animations */
+    @keyframes explode-1 {
+        0% {
+            opacity: 0;
+            transform: translate(0, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-150px, 59px); 
+        }
+    }
+    @keyframes explode-2 {
+        0% {
+            opacity: 0;
+            transform: (0, 20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-180px, -60px); 
+        }
+    }
+    @keyframes explode-3 {
+        0% {
+            opacity: 0;
+            transform: (0, 40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-150px, -130px); 
+        }
+    }
+    @keyframes explode-4 {
+        0% {
+            opacity: 0;
+            transform: (0, 60px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-90px, -180px);
+        }
+    }
+    @keyframes explode-5 {
+        0% {
+            opacity: 0;
+            transform: (0px, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-30px, -130px); 
+        }
+    }
+    @keyframes explode-6 {
+        0% {
+            opacity: 0;
+            transform: (-100px, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(20px, -160px); 
+        }
+    }
+    @keyframes explode-7 {
+        0% {
+            opacity: 0;
+            transform: (0px, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(100px, -50px);
+        }
+    }
+    @keyframes explode-8 {
+        0% {
+            opacity: 0;
+            transform: (0px, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(90px, -30px);
+        }
+    }
+
+    .hurray-text {
+        font-size: 3.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
 }
