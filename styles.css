@@ -56,30 +56,33 @@ body {
     color: #252525;
     font-weight: 700;
 }
+
 .triangle {
-    display: none;
-    width: 18em;
-    height: 18em;
+    /* display: none; */
+    width: 16em;
+    height: 16em;
     border: 1em solid #000000A3;
     transform: rotate(225deg);
     border-right: none;
     border-bottom: none;
     position: relative;
+    padding-bottom: 10px;
+    bottom: 2vh;
 }
 
 .triangle::before {
     position: absolute;
     content: '';
     border-top: 1em solid #000000A3;
-    width: calc((1.41 * (18em + 1em)));
+    width: calc((1.41 * (16em + 1em)));
     transform: rotate(-45deg);
-    left: -4.5em;
-    top: 8.44em;
+    left: -4.11em;
+    top: 7.22em;
 }
 .corner-left {
     position: absolute;
     top: 0;
-    left: 18em;
+    left: 16em;
     transform: translate(-75%, -40%) rotate(135deg);
     background-color: transparent;
 }
@@ -91,7 +94,7 @@ body {
 }
 .corner-right {
     position: absolute;
-    top: 18em;
+    top: 16em;
     transform: translate(-40%, -75%) rotate(135deg);
     background-color: transparent;
 }
@@ -162,8 +165,17 @@ ul li::marker {
     font-size: 2.3rem;
     font-weight: 600;
     font-family: "Dangrek", sans-serif;
+    cursor: pointer;
 }
-#rules-button {
+.end-buttons {
+    width: 97%;
+    display: flex;
+    justify-content: end;
+    bottom: 0;
+    position: absolute;
+    transform: translate(0%, -45%);
+}
+#rules-button, #next-button {
     color: #FFFFFF;
     border: 3px solid #FFFFFF;
     background-color: transparent;
@@ -171,18 +183,19 @@ ul li::marker {
     padding: 8px 28px;
     font-size: 1.4rem;
     font-weight: 600;
-    bottom: 0px;
-    right: 0px;
-    transform: translate(-30%, -50%);
-    position: absolute;
+}
+#next-button {
+    margin-left: 2rem;
+}
+a {
+    text-decoration: none;
 }
 .result-view {
+    display: none;
     width: 60vw;
     height: 18em;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px solid black;
     text-align: center;
     color: #FFFFFF;
 }
@@ -191,7 +204,7 @@ ul li::marker {
 }
 .result-text {
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .play-button {
     background-color: #FFFFFF;
@@ -203,18 +216,8 @@ ul li::marker {
     letter-spacing: 0.15rem;
     margin-top: 20px;
 }
-
-
-.glow {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #289A27; /* Initial background color */
-    position: relative;
-    box-shadow: 
-        0 0 0 20px #32A62F, /* Second shadow layer */
-        0 0 0 40px #66B248; /* Third shadow layer */
-    animation: ripple 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Ripple animation applied */
+button {
+    cursor: pointer;
 }
 
 .glow {
@@ -224,8 +227,8 @@ ul li::marker {
     background-color: #289A27; /* Initial background color */
     box-shadow: 
         0 0 0 20px #32A62F, /* Second shadow layer */
-        0 0 0 40px #66B248; /* Third shadow layer */
-    animation: ripple 4s infinite ease-in; /* Bezier animation */
+        0 0 0 50px #66B248; /* Third shadow layer */
+    animation: ripple 2s infinite ease-in; /* Bezier animation */
 }
 
 @keyframes ripple {
@@ -233,19 +236,19 @@ ul li::marker {
         background-color: #289A27; /* Start with the initial color */
         box-shadow: 
             0 0 0 20px #32A62F,
-            0 0 0 40px #66B248;
+            0 0 0 50px #66B248;
     }
     50% {
         background-color: rgb(58, 171, 56); /* Mid-transition color */
         box-shadow: 
-            0 0 20px 40px rgba(50, 166, 47, 0.4),
-            0 0 40px 60px rgba(102, 178, 72, 0.4);
+            0 0 20px 50px rgba(50, 166, 47, 0.4),
+            0 0 50px 60px rgba(102, 178, 72, 0.4);
     }
     100% {
         background-color: rgba(50, 166, 47, 0); /* Fade to transparent */
         box-shadow: 
             0 0 0 20px rgba(50, 166, 47, 0),
-            0 0 0 40px rgba(102, 178, 72, 0);
+            0 0 0 50px rgba(102, 178, 72, 0);
     }
 }
 

@@ -22,12 +22,12 @@
             </div>
         </div>
         <div class="triangle">
-            <div class="corner-bottom"><img class="paper" src="images/icons8-hand-64 1.png" alt=""></div>
-            <div class="corner-left"><img class="rock" src="images/icons8-fist-67 1.png" alt=""></div>
-            <div class="corner-right"><img class="scissors" src="images/17911 1.png" alt=""></div>
+            <div class="corner-bottom"><img class="paper" src="images/paper.png" alt=""></div>
+            <div class="corner-left"><img class="rock" src="images/rock.png" alt=""></div>
+            <div class="corner-right"><img class="scissors" src="images/scissors.png" alt=""></div>
         </div>
         <div class="rules">
-             <span>X</span>
+             <span class="close-rules-button">X</span>
             <h1>Game Rules</h1>
             <br>
             <ul>
@@ -38,22 +38,22 @@
             </ul>
           </div>
           
-        <div class="result-view" style="display: none;">
+        <div class="result-view" >
             <div class="you-picked"><h4>YOU PICKED</h4>
-                <div class="glow">
-                <img class="paper" src="images/icons8-hand-64 1.png" alt="">
-                </div>
             </div>
-            <div class="result-text"><h1> YOU LOST</h1> <h3>AGAINST PC</h3>
-                <button class="play-button">PLAY AGAIN <br> </button>
+            
+            <div class="result-text">
+                <a href="index.html"><button class="play-button">PLAY AGAIN <br> </button></a>
             </div>
+            
             <div class="computer-picked"><h4>PC PICKED</h4>
-                <div class="glow">
-                <img class="scissors" src="images/17911 1.png" alt="">
-            </div>
             </div>
         </div>
-        <button id="rules-button">RULES</button>
+        <div class="end-buttons">
+            <button id="rules-button">RULES</button>
+            <a href="hurray.html"><button id="next-button">NEXT</button></a>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
