@@ -21,9 +21,7 @@ This project is a Rock Paper Scissors game created using HTML, CSS, and JavaScri
 ![Desktop View](screenshots/desktopv3.png)
 
 ### Mobile View:
-![Mobile View](screenshots/mobilev1.png)
-![Mobile View](screenshots/mobilev2.png)
-![Mobile View](screenshots/mobilev3.png)
+![Mobile View](screenshots/mobile-view.png)
 
 # How to Play
 
